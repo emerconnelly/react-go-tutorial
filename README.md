@@ -1,11 +1,12 @@
 # react-go-tutorial
 
 A simple CRUD todo list app using
-- Go backend
-- React frontend
-  - [ChakraUI](https://v2.chakra-ui.com/) component library
-  - [TanStack Query](https://tanstack.com/query/latest) 
-- MongoDB database
+- Go for backend
+- React for frontend
+  - [ChakraUI](https://v2.chakra-ui.com/) for component library
+  - [TanStack Query](https://tanstack.com/query/latest) for data-fetching library
+- free MongoDB Atlas [cluster](https://cloud.mongodb.com/v2/66d3cccbe605cd7628bda426#/clusters/detail/Cluster0) for database
+- [Railway](https://railway.app/project/b149945c-ceb8-4975-9a63-818712672054) for deployment and hosting
 
 Tutorial author: <https://github.com/burakorkmez/react-go-tutorial>
 
@@ -70,7 +71,3 @@ Tutorial author: <https://github.com/burakorkmez/react-go-tutorial>
     npm run build
     # push to git
     ```
-
-## database
-
-Hosted in a free MongoDB Atlas cluster: <https://cloud.mongodb.com/v2/66d3cccbe605cd7628bda426#/clusters/detail/Cluster0>
