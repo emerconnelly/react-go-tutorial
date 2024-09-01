@@ -7,6 +7,7 @@ import (
 	"os"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -50,11 +51,13 @@ func main() {
 	// fiber app
 	app := fiber.New()
 
-	// CORS middleware
-	// app.Use(cors.New(cors.Config{
-	// 	AllowOrigins: "http://localhost:5173", // port that the frontend is running on
-	// 	AllowHeaders: "Origin, Content-Type, Accept",
-	// }))
+	// allow CORS in development
+	if os.Getenv("ENV") == "development" {
+		app.Use(cors.New(cors.Config{
+			AllowOrigins: "http://localhost:5173", // port that the frontend is running on
+			AllowHeaders: "Origin, Content-Type, Accept",
+		}))
+	}
 
 	// routes
 	app.Get("/api/todos", getTodos)
@@ -68,7 +71,7 @@ func main() {
 		port = "5000"
 	}
 
-	// serve build frontend if in production
+	// serve build optimized frontend in production
 	if os.Getenv("ENV") == "production" {
 		app.Static("/", "./client/dist") // build optimized frontend
 	}
