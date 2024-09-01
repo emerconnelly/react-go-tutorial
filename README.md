@@ -7,6 +7,7 @@ A simple CRUD todo list app using
   - [TanStack Query](https://tanstack.com/query/latest) for data-fetching library
 - free MongoDB Atlas [cluster](https://cloud.mongodb.com/v2/66d3cccbe605cd7628bda426#/clusters/detail/Cluster0) for database
 - [Railway](https://railway.app/project/b149945c-ceb8-4975-9a63-818712672054) for deployment and hosting
+  - uses [Nixpacks](https://github.com/railwayapp/nixpacks) for image building
 
 Tutorial author: <https://github.com/burakorkmez/react-go-tutorial>
 
