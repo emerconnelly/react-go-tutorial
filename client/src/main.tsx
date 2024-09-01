@@ -1,14 +1,19 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import { ChakraProvider } from '@chakra-ui/react'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import ReactDOM from 'react-dom/client'
+import React from 'react'
+import theme from './chakra/theme.ts'
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <ChakraProvider>
+const queryClient = new QueryClient()
 
-      <App />
-    </ChakraProvider>
-  </StrictMode>,
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <ChakraProvider theme={theme}>
+        <App />
+      </ChakraProvider>
+    </QueryClientProvider>
+  </React.StrictMode>,
 )

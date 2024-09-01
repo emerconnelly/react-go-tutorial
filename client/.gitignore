@@ -8,7 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
+# dist // not best practice, but for this project, we will push it to the repo
 dist-ssr
 *.local
 
