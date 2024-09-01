@@ -20,7 +20,7 @@ go get go.mongodb.org/mongo-driver/mongo
     PORT=<port>
     MONGODB_URI=mongodb+srv://<username>:<password>@<cluster_name>.2feve.mongodb.net/<database_name>?retryWrites=true&w=majority&appName=<cluster_name>
     ```
-2. run the Go app using `air` (live reload for go apps)
+2. start the app using `air` (live reload for Go apps)
     ```bash
     ❯ air
     
