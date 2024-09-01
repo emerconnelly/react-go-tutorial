@@ -28,12 +28,7 @@ Tutorial author: <https://github.com/burakorkmez/react-go-tutorial>
 
 ## usage
 
-1. create an `.env` file
-
-    ```env
-    PORT=<port>
-    MONGODB_URI=mongodb+srv://<username>:<password>@<cluster_name>.2feve.mongodb.net/<database_name>?retryWrites=true&w=majority&appName=<cluster_name>
-    ```
+1. create an [`.env` file](.env.sample)
 
 2. start the Go app using `air` (live reload for Go apps)
 
