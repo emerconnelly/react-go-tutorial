@@ -26,10 +26,12 @@ func main() {
 	// hey
 	fmt.Println("hello world")
 
-	// load .env file
-	err := godotenv.Load(".env")
-	if err != nil {
-		log.Fatal(err)
+	if os.Getenv("ENV") != "production" {
+		// load .env file if not in production
+		err := godotenv.Load(".env")
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
 
 	// connect to MongoDB Atlas
@@ -60,11 +62,17 @@ func main() {
 	app.Patch("/api/todos/:id", updateTodo)
 	app.Delete("/api/todos/:id", deleteTodo)
 
-	// port listener
+	// get port from environment variable
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "5000"
 	}
+
+	if os.Getenv("ENV") == "production" {
+		app.Static("/", "./client/dist") // build optimized frontend
+	}
+
+	// listen on port
 	log.Fatal(app.Listen("0.0.0.0:" + port))
 }
 
