@@ -1,4 +1,4 @@
-# about
+# react-go-tutorial
 
 A simple CRUD todo list app using Go, React, and MongoDB.
 
