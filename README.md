@@ -1,6 +1,11 @@
 # react-go-tutorial
 
-A simple CRUD todo list app using Go, React, and MongoDB.
+A simple CRUD todo list app using
+- Go backend
+- React frontend
+  - [ChakraUI](https://v2.chakra-ui.com/) component library
+  - [TanStack Query](https://tanstack.com/query/latest) 
+- MongoDB database
 
 Tutorial author: <https://github.com/burakorkmez/react-go-tutorial>
 
