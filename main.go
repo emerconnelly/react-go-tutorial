@@ -68,6 +68,7 @@ func main() {
 		port = "5000"
 	}
 
+	// serve build frontend if in production
 	if os.Getenv("ENV") == "production" {
 		app.Static("/", "./client/dist") // build optimized frontend
 	}
