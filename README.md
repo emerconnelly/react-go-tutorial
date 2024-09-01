@@ -1,5 +1,7 @@
 # about
 
+A simple CRUD todo app using Go backend & React frontend.
+
 Tutorial author: <https://github.com/burakorkmez/react-go-tutorial>
 
 ## setup
