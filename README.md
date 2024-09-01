@@ -63,6 +63,14 @@ Tutorial author: <https://github.com/burakorkmez/react-go-tutorial>
     npm run dev
     ```
 
+4. when production is ready, build React app and push to repo
+
+    ```bash
+    cd ./client
+    npm run build
+    # push to git
+    ```
+
 ## database
 
 Hosted in a free MongoDB Atlas cluster: <https://cloud.mongodb.com/v2/66d3cccbe605cd7628bda426#/clusters/detail/Cluster0>
