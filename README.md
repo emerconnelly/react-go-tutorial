@@ -1,6 +1,6 @@
 # about
 
-A simple CRUD todo app using Go backend & React frontend.
+A simple CRUD todo list app using Go, React, and MongoDB.
 
 Tutorial author: <https://github.com/burakorkmez/react-go-tutorial>
 
@@ -18,3 +18,7 @@ go get go.mongodb.org/mongo-driver/mongo
 ```bash
 air # live reload for go
 ```
+
+## database
+
+Hosted in a free MongoDB Atlas cluster: <https://cloud.mongodb.com/v2/66d3cccbe605cd7628bda426#/clusters/detail/Cluster0>
