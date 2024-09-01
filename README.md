@@ -2,7 +2,7 @@
 
 A simple CRUD todo list app using
 - Go for backend
-- React for frontend
+- React Typescript for frontend
   - [ChakraUI](https://v2.chakra-ui.com/) for component library
   - [TanStack Query](https://tanstack.com/query/latest) for data-fetching library
 - free MongoDB Atlas [cluster](https://cloud.mongodb.com/v2/66d3cccbe605cd7628bda426#/clusters/detail/Cluster0) for database
