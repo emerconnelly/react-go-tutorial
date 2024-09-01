@@ -40,14 +40,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer client.Disconnect(context.Background()) // disconnect if some fancy shit happens idk this doesn't make sense yet
-
-	// test MongoDB Atlas connection even though we literally just connected to it wtf
-	err = client.Ping(context.Background(), nil)
-	if err != nil {
-		log.Fatal(err)
-	}
 	fmt.Println("Connected to MongoDB Atlas")
+	defer client.Disconnect(context.Background()) // disconnect if some fancy shit happens idk this doesn't make sense yet
 
 	// load the entire collection from the database
 	collection = client.Database("golang_db").Collection("todos")
